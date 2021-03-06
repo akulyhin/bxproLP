@@ -1,0 +1,83 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.main {
+    position: relative;
+    width: calc(100% + 20px);
+    height: 760px;
+    padding: 10px 60px;
+    margin-top: -80px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-image: url(../images/main/hero-bg.svg);
+    background-size: 44%;
+    background-position: 122% -85px;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media (max-width: 480px) {
+    padding: 0;
+    margin: -80px 0 0 0;
+    background-position: 122px 5px;
+    background-size: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    }
+}
+
+.main-block {
+    padding: 0 10px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+    // min-height: 90vh;
+}
+
+.main-block .sign-in {
+    margin-right: 30px;
+}
+
+
+.main-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 900;
+
+    @media (max-width: 757px) {
+        font-size: 28px;
+    }
+}
+
+.promo {
+    display: inline-block;
+    transition: all .3s;
+}
+
+.promo::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 17px;
+    background-image: url(../images/main/promo.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}

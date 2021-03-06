@@ -1,0 +1,11 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize';
+@import 'helpers/variables';
+@import 'base';
+
+// Components
+@import 'components/header';
+@import 'components/main';
