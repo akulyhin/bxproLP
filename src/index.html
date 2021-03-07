@@ -70,7 +70,19 @@
       <script src="./js/magnific-popup.js"></script>
       <!-- /Magnific Popup -->
 
+      <!-- Mask -->
+    <script src="js/mask/jquery.mask.js"></script>
+    <script src="js/mask/jquery.mask.min.js"></script>
 
+    <script>
+      $(document).ready(function () {
+        $('.tel-input').mask('+38(000)000-00-00');
+        $('.form-tel').mask('+38(000)000-00-00');
+      });
+    </script>
+
+    <!-- /Mask -->
+    
     <!-- inject:js -->
     <!-- endinject -->
   </body>

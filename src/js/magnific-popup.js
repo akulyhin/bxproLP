@@ -43,6 +43,17 @@ $('.design-content_img').magnificPopup({
     });
 
 
+    $('.modalForm').magnificPopup({
+        type: 'inline',
+        focus: '#name',
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        zoom: {
+            enabled: true,
+            duration: 300
+        }
+     });
+
+
   
 $('.about-us-img').magnificPopup({
     delegate: 'a',
