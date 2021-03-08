@@ -31,13 +31,13 @@ body {
 
 .main-block {
     padding: 0 10px;
-    width: calc(100% - 25px);
+    width: calc(100% - 30px);
     position: absolute;
     top: 20%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    // overflow: hidden;
 
     @media (min-width: 1650px) {
         width: 90%;
@@ -48,6 +48,7 @@ body {
         width: 100%;
     }
 }
+
 
 .main-block .sign-in {
     margin-right: 30px;
@@ -125,14 +126,53 @@ body {
     vertical-align: middle;
 }
 
-.img-block img {
-    max-height: 600px;
-    animation: animate-mainImg 8s infinite;
-}
-@media (max-width: 1080px) {
-    .img-block {
+// .img-block img {
+//     position: relative;
+//     display: flex;
+//     justify-content: space-between;
+//     max-height: 600px;
+//     animation: animate-mainImg 8s infinite;
+// }
+
+// @media (max-width: 1080px) {
+//     .img-block {
+//         display: none;
+//     }
+// }
+
+.img-block {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1080px) {
         display: none;
     }
+}
+
+.img-block img {
+    max-height: 330px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .45);
+}
+
+.img-block-1 {
+    top: -100px;
+    right: 45px;
+    position: absolute;
+}
+
+.img-block-2 {
+    top: 0;
+    left: -20%;
+    position: absolute;
+    z-index: 1;
+}
+
+.img-block-3 {
+    top: 100px;
+    left: 20%;
+    position: absolute;
+    z-index: 2;
 }
 
 @keyframes animate-mainImg {

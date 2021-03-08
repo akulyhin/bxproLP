@@ -55,7 +55,7 @@ $('.design-content_img').magnificPopup({
 
 
   
-$('.about-us-img').magnificPopup({
+$('.img-block').magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
@@ -70,7 +70,7 @@ $('.about-us-img').magnificPopup({
     },
     zoom: {
         enabled: true,
-        duration: 300, // don't foget to change the duration also in CSS
+        duration: 500, // don't foget to change the duration also in CSS
         opener: function(element) {
             return element.find('img');
         }
