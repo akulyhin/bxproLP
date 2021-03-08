@@ -51,6 +51,8 @@
    padding: 10px 15px;
    transition: .3s;
    animation: btnpulse 3s infinite;
+   position: relative;
+   overflow: hidden;
 
    &::before {
     content: '';
@@ -70,7 +72,7 @@
     background-color: #474747;
 }
 
-@keyframes go{
+@keyframes go {
 	0%{
 		left: -30px;
 	}
