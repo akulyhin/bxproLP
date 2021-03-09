@@ -40,7 +40,7 @@ $('.design-content_img').magnificPopup({
 
 
 
-    $('.modalForm').magnificPopup({
+    $('.modalForm, .btn-intro-lead').magnificPopup({
         type: 'inline',
         focus: '#name',
         mainClass: 'mfp-with-zoom mfp-img-mobile',
@@ -49,6 +49,8 @@ $('.design-content_img').magnificPopup({
             duration: 300
         }
      });
+
+     
 
 
   
