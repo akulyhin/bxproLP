@@ -93,3 +93,77 @@ $('[data-time="24"]').click(function() {
     $('[data-type="company"] .base').css('display', 'block');
     $('[data-type="company"] .discount').css('display', 'block').html('40%');
 })
+
+
+$('[data-tab="license-box"]').click(function() {
+    $(this).addClass('-active');
+    $('[data-tab="license-cloud"]').removeClass('-active');
+    $('#license-cloud').removeClass('-active');
+    $('#license-box').addClass('-active');
+})
+
+
+$('[data-tab="license-cloud"]').click(function() {
+    $(this).addClass('-active');
+    $('[data-tab="license-box"]').removeClass('-active');
+    $('#license-box').removeClass('-active');
+    $('#license-cloud').addClass('-active');
+})
+
+const counts = document.querySelectorAll('.intro-license-table-user-count');
+
+$('[data-count="50"]').click(function() {
+    $('[data-type="corporate"] .full').text('35 200 ₴');
+
+    counts.forEach(item => {
+        if (item.className === 'intro-license-table-user-count -active') {
+            item.classList.remove('-active');
+        }
+    });
+
+    $(this).addClass('-active');
+})
+
+$('[data-count="100"]').click(function() {
+    counts.forEach(item => {
+        if (item.className === 'intro-license-table-user-count -active') {
+            item.classList.remove('-active');
+        }
+    })
+
+    $(this).addClass('-active');
+    $('[data-type="corporate"] .full').text('66 000 ₴');
+})
+
+$('[data-count="250"]').click(function() {
+    counts.forEach(item => {
+        if (item.className === 'intro-license-table-user-count -active') {
+            item.classList.remove('-active');
+        }
+    })
+
+    $(this).addClass('-active');
+    $('[data-type="corporate"] .full').text('88 000 ₴');
+})
+
+$('[data-count="500"]').click(function() {
+    counts.forEach(item => {
+        if (item.className === 'intro-license-table-user-count -active') {
+            item.classList.remove('-active');
+        }
+    })
+
+    $(this).addClass('-active');
+    $('[data-type="corporate"] .full').text('169 000 ₴');
+})
+
+
+const features = document.querySelectorAll('.intro-license-features-item__title');
+
+features.forEach(feature => {
+    feature.addEventListener('click', (e) => {
+        console.dir(e.target);
+        e.target.nextElementSibling.style.display = e.target.nextElementSibling.style.display === 'none' ? '' : 'none';
+        console.log(e.target.nextElementSibling)
+    })
+})
