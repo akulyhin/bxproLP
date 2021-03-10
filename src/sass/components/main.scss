@@ -5,22 +5,20 @@ body {
 
 .main {
     position: relative;
-    // width: calc(100% + 20px);
+    width: calc(100% + 20px);
     height: 760px;
     padding: 10px 60px;
-    margin-top: -80px;
     margin-left: -10px;
     margin-right: -10px;
     background-image: url(../images/main/hero-bg.svg);
     background-size: 44%;
     background-position: 122% -85px;
     background-repeat: no-repeat;
-    position: relative;
     max-height: 100vh;
+    display: flex;
 
     @media (max-width: 767px) {
     padding: 0;
-    margin: -80px 0 0 0;
     background-position: 122px 5px;
     background-size: 100%;
     width: 100%;
@@ -33,19 +31,15 @@ body {
 .main-block {
     padding: 0 10px;
     width: calc(100% - 30px);
-    position: absolute;
-    top: 20%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // overflow: hidden;
 
     @media (min-width: 1650px) {
         width: 90%;
     }
 
     @media (max-width: 767px) {
-        top: 30%;
         width: 100%;
     }
 }
@@ -127,24 +121,11 @@ body {
     vertical-align: middle;
 }
 
-// .img-block img {
-//     position: relative;
-//     display: flex;
-//     justify-content: space-between;
-//     max-height: 600px;
-//     animation: animate-mainImg 8s infinite;
-// }
-
-// @media (max-width: 1080px) {
-//     .img-block {
-//         display: none;
-//     }
-// }
-
 .img-block {
     position: relative;
     display: flex;
     justify-content: space-between;
+    top: -100px;
 
     @media (max-width: 1080px) {
         display: none;
