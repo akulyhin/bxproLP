@@ -98,3 +98,24 @@ if (localStorage.getItem('utm_content')) {
 if (localStorage.getItem('utm_term')) {
   utm_term.value = localStorage.getItem('utm_term');
 }
+
+
+const back2Top = document.querySelector('.back2Top');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 100) {
+    back2Top.classList.remove('hidden')
+  }
+  else {
+    back2Top.classList.add('hidden')
+  }
+})
+
+
+
+back2Top.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+})
