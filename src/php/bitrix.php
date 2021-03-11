@@ -6,6 +6,7 @@ $name = $_POST['name-11'];
 $phone = $_POST['tel-10'];
 $email = $_POST['email'];
 $site = $_POST['site'];
+$product = $_POST['product'];
 
 
 
@@ -20,7 +21,7 @@ $queryData = http_build_query(array(
     'PHONE' => Array("n0" => Array("VALUE" => $phone, "VALUE_TYPE" => "WORK")),
     'EMAIL' => Array("n0" => Array("VALUE" => $email, "VALUE_TYPE" => "WORK")),
     'WEB' => Array("n0" => Array("VALUE" => $site, "VALUE_TYPE" => "WORK")),
-    'COMMENTS' => '',
+    'COMMENTS' => $product,
     'SOURCE_ID' => 'WEB',
     'UTM_SOURCE' => $_POST['utm_source'],
     'UTM_MEDIUM' => $_POST['utm_medium'],

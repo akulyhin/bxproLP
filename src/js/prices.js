@@ -166,3 +166,15 @@ features.forEach(feature => {
         console.log(e.target.nextElementSibling)
     })
 })
+
+
+const btnsLead = document.querySelectorAll('.btn-intro-lead');
+const product = document.getElementById('product');
+const modalTitle = document.querySelector('.modal-title');
+
+btnsLead.forEach(btn => {
+    btn.addEventListener('click', () => {
+        product.value = `Тариф: ${btn.dataset.name}`;
+        modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}`;
+    })
+})
