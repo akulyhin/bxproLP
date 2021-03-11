@@ -5,8 +5,26 @@ header {
     z-index: 999;
 }
 
+.header-top {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.header-top div:not(:first-child) {
+    margin-left: 35px;
+}
+
+@media (max-width: 767px) {
+    .address,
+    .email {
+        display: none;
+    }
+}
+
 .header {
-    height: 80px;
+    height: 70px;
     // position: relative;
     padding: 20px 0;
     display: flex;

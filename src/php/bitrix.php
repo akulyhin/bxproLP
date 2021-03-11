@@ -16,17 +16,18 @@ $queryUrl = 'https://bxpro.bitrix24.ua/rest/11/17ro677za8f0rnoj/crm.lead.add.jso
 $queryData = http_build_query(array(
   'fields' => array(
     'TITLE' => 'Заявка с сайта BXpro от '.$phone,
-    			'NAME' => $name,
-				'PHONE' => Array("n0" => Array("VALUE" => $phone, "VALUE_TYPE" => "WORK")),
-                'EMAIL' => Array("n0" => Array("VALUE" => $email, "VALUE_TYPE" => "WORK"),
-				'COMMENTS' => $site,
-				'SOURCE_ID' => 'WEB',
-	            'UTM_SOURCE' => $_POST['utm-source'],
-	            'UTM_MEDIUM' => $_POST['utm-medium'],
-	            'HTTP_HOST' => $_SERVER['HTTP_HOST'],
-	            'UTM_CAMPAIGN' => $_POST['utm-campaign'],
-	            'UTM_CONTENT' => $_POST['utm-content'],
-	            'UTM_TERM' => $_POST['utm-term'],
+    'NAME' => $name,
+    'PHONE' => Array("n0" => Array("VALUE" => $phone, "VALUE_TYPE" => "WORK")),
+    'EMAIL' => Array("n0" => Array("VALUE" => $email, "VALUE_TYPE" => "WORK")),
+    'WEB' => Array("n0" => Array("VALUE" => $site, "VALUE_TYPE" => "WORK")),
+    'COMMENTS' => '',
+    'SOURCE_ID' => 'WEB',
+    'UTM_SOURCE' => $_POST['utm_source'],
+    'UTM_MEDIUM' => $_POST['utm_medium'],
+    'HTTP_HOST' => $_SERVER['HTTP_HOST'],
+    'UTM_CAMPAIGN' => $_POST['utm_campaign'],
+    'UTM_CONTENT' => $_POST['utm_content'],
+    'UTM_TERM' => $_POST['utm_term'],
   ),
   'params' => array("REGISTER_SONET_EVENT" => "Y")
 ));
@@ -44,6 +45,12 @@ $result = curl_exec($curl);
 curl_close($curl);
 $result = json_decode($result, 1);
 if (array_key_exists('error', $result)) echo "Ошибка при сохранении лида: ".$result['error_description']."<br/>";
+
+if ($curl) {
+  echo '<center><p class="success"><b>Мы получили Вашу заявку! Спасибо!</b></p></center>';
+} else {
+  echo '<center><p class="fail">Ошибка. Попробойте позже!</p></center>';
+}
 
 // Битрикс24 по вебхуку конец
 
