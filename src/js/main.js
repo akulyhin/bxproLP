@@ -21,3 +21,16 @@ $('.more-services').click(function() {
   
   
 
+// Отправка формы
+
+$(document).ready(function() {
+  $('#form-action').submit(function(){
+      $.post("./php/bitrix.php", $("#form-action").serialize(),  function(response) {
+          $('#form-action').hide('slow');
+          $('#post_form_success').html(response);
+          dataLayer.push({'event': 'formsend'});
+            fbq('track', 'Lead');
+      });
+      return false;
+  });
+});

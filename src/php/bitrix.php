@@ -1,0 +1,50 @@
+<?php
+
+// Битрикс24 по вебхуку
+
+$name = $_POST['name-11'];
+$phone = $_POST['tel-10'];
+$email = $_POST['email'];
+$site = $_POST['site'];
+
+
+
+
+// формируем URL в переменной $queryUrl
+$queryUrl = 'https://bxpro.bitrix24.ua/rest/11/17ro677za8f0rnoj/crm.lead.add.json'; // Добавить лид → добавить сделку deal.add
+// формируем параметры для создания лида в переменной $queryData
+$queryData = http_build_query(array(
+  'fields' => array(
+    'TITLE' => 'Заявка с сайта BXpro от '.$phone,
+    			'NAME' => $name,
+				'PHONE' => Array("n0" => Array("VALUE" => $phone, "VALUE_TYPE" => "WORK")),
+                'EMAIL' => Array("n0" => Array("VALUE" => $email, "VALUE_TYPE" => "WORK"),
+				'COMMENTS' => $site,
+				'SOURCE_ID' => 'WEB',
+	            'UTM_SOURCE' => $_POST['utm-source'],
+	            'UTM_MEDIUM' => $_POST['utm-medium'],
+	            'HTTP_HOST' => $_SERVER['HTTP_HOST'],
+	            'UTM_CAMPAIGN' => $_POST['utm-campaign'],
+	            'UTM_CONTENT' => $_POST['utm-content'],
+	            'UTM_TERM' => $_POST['utm-term'],
+  ),
+  'params' => array("REGISTER_SONET_EVENT" => "Y")
+));
+// обращаемся к Битрикс24 при помощи функции curl_exec
+$curl = curl_init();
+curl_setopt_array($curl, array(
+  CURLOPT_SSL_VERIFYPEER => 0,
+  CURLOPT_POST => 1,
+  CURLOPT_HEADER => 0,
+  CURLOPT_RETURNTRANSFER => 1,
+  CURLOPT_URL => $queryUrl,
+  CURLOPT_POSTFIELDS => $queryData,
+));
+$result = curl_exec($curl);
+curl_close($curl);
+$result = json_decode($result, 1);
+if (array_key_exists('error', $result)) echo "Ошибка при сохранении лида: ".$result['error_description']."<br/>";
+
+// Битрикс24 по вебхуку конец
+
+?>

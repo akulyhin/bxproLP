@@ -6,7 +6,6 @@ $(document).ready(function(){
     })
 })
 
-
 $('[data-time="1"]').click(function() {
     $(".intro-license-table-select-title").text('на 1 месяц');
     $('[data-type="crm"] .full').html('1 200 ₴');
