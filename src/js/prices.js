@@ -2,7 +2,6 @@
 $(document).ready(function(){
     $('.intro-license-table-select').click(function() {
         $('.intro-license-table-select-dropdown').slideToggle(300);
-
     })
 })
 
@@ -11,18 +10,27 @@ $('[data-time="1"]').click(function() {
     $('[data-type="crm"] .full').html('1 200 ₴');
     $('[data-type="crm"] .base').css('display', 'none');
     $('[data-type="crm"] .discount').css('display', 'none');
+    $('a[data-type="crm"]').attr('data-price', '1200');
+    $('a[data-type="crm"]').attr('data-time-name', 'на 1 месяц');
+    
 
     $('[data-type="task"] .full').html('1 200 ₴');
     $('[data-type="task"] .base').css('display', 'none');
     $('[data-type="task"] .discount').css('display', 'none');
+    $('a[data-type="task"]').attr('data-price', '1200');
+    $('a[data-type="task"]').attr('data-time-name', 'на 1 месяц');
 
     $('[data-type="team"] .full').html('2 200 ₴');
     $('[data-type="team"] .base').css('display', 'none');
     $('[data-type="team"] .discount').css('display', 'none');
+    $('a[data-type="team"]').attr('data-price', '2200');
+    $('a[data-type="team"]').attr('data-time-name', 'на 1 месяц');
 
     $('[data-type="company"] .full').html('4 400 ₴');
     $('[data-type="company"] .base').css('display', 'none');
     $('[data-type="company"] .discount').css('display', 'none');
+    $('a[data-type="company"]').attr('data-price', '4400');
+    $('a[data-type="company"]').attr('data-time-name', 'на 1 месяц');
 })
 
 
@@ -31,18 +39,26 @@ $('[data-time="3"]').click(function() {
     $('[data-type="crm"] .full').html('3 600 ₴');
     $('[data-type="crm"] .base').css('display', 'none');
     $('[data-type="crm"] .discount').css('display', 'none');
+    $('a[data-type="crm"]').attr('data-price', '3600');
+    $('a[data-type="crm"]').attr('data-time-name', 'на 3 месяца');
 
     $('[data-type="task"] .full').html('3 600 ₴');
     $('[data-type="task"] .base').css('display', 'none');
     $('[data-type="task"] .discount').css('display', 'none');
+    $('a[data-type="task"]').attr('data-price', '3600');
+    $('a[data-type="task"]').attr('data-time-name', 'на 3 месяца');
 
     $('[data-type="team"] .full').html('6 600 ₴');
     $('[data-type="team"] .base').css('display', 'none');
     $('[data-type="team"] .discount').css('display', 'none');
+    $('a[data-type="team"]').attr('data-price', '6600');
+    $('a[data-type="team"]').attr('data-time-name', 'на 3 месяца');
 
     $('[data-type="company"] .full').html('13 200 ₴');
     $('[data-type="company"] .base').css('display', 'none');
     $('[data-type="company"] .discount').css('display', 'none');
+    $('a[data-type="company"]').attr('data-price', '13200');
+    $('a[data-type="company"]').attr('data-time-name', 'на 3 месяца');
 })
 
 
@@ -52,21 +68,29 @@ $('[data-time="12"]').click(function() {
     $('[data-type="crm"] .base').html('14 400 ₴');
     $('[data-type="crm"] .base').css('display', 'block');
     $('[data-type="crm"] .discount').css('display', 'block').html('30%');
+    $('a[data-type="crm"]').attr('data-price', '10080');
+    $('a[data-type="crm"]').attr('data-time-name', 'на год');
 
     $('[data-type="task"] .full').html('10 080 ₴');
     $('[data-type="task"] .base').html('14 400 ₴');
     $('[data-type="task"] .base').css('display', 'block');
     $('[data-type="task"] .discount').css('display', 'block').html('30%');
+    $('a[data-type="task"]').attr('data-price', '10080');
+    $('a[data-type="task"]').attr('data-time-name', 'на год');
 
     $('[data-type="team"] .full').html('18 480 ₴');
     $('[data-type="team"] .base').html('26 400 ₴');
     $('[data-type="team"] .base').css('display', 'block');
     $('[data-type="team"] .discount').css('display', 'block').html('30%');
+    $('a[data-type="team"]').attr('data-price', '18480');
+    $('a[data-type="team"]').attr('data-time-name', 'на год');
 
     $('[data-type="company"] .full').html('36 960 ₴');
     $('[data-type="company"] .base').html('52 800 ₴');
     $('[data-type="company"] .base').css('display', 'block');
     $('[data-type="company"] .discount').css('display', 'block').html('30%');
+    $('a[data-type="company"]').attr('data-price', '36960');
+    $('a[data-type="company"]').attr('data-time-name', 'на год');
 })
 
 
@@ -76,21 +100,29 @@ $('[data-time="24"]').click(function() {
     $('[data-type="crm"] .base').html('28 800 ₴');
     $('[data-type="crm"] .base').css('display', 'block');
     $('[data-type="crm"] .discount').css('display', 'block').html('40%');
+    $('a[data-type="crm"]').attr('data-price', '17280');
+    $('a[data-type="crm"]').attr('data-time-name', 'на 2 года');
 
     $('[data-type="task"] .full').html('17 280 ₴');
     $('[data-type="task"] .base').html('28 800 ₴');
     $('[data-type="task"] .base').css('display', 'block');
     $('[data-type="task"] .discount').css('display', 'block').html('40%');
+    $('a[data-type="task"]').attr('data-price', '17280');
+    $('a[data-type="task"]').attr('data-time-name', 'на 2 года');
 
     $('[data-type="team"] .full').html('31 680 ₴');
     $('[data-type="team"] .base').html('52 800 ₴');
     $('[data-type="team"] .base').css('display', 'block');
     $('[data-type="team"] .discount').css('display', 'block').html('40%');
+    $('a[data-type="team"]').attr('data-price', '31680');
+    $('a[data-type="team"]').attr('data-time-name', 'на 2 года');
 
     $('[data-type="company"] .full').html('63 360 ₴');
     $('[data-type="company"] .base').html('105 600 ₴');
     $('[data-type="company"] .base').css('display', 'block');
     $('[data-type="company"] .discount').css('display', 'block').html('40%');
+    $('a[data-type="company"]').attr('data-price', '63360');
+    $('a[data-type="company"]').attr('data-time-name', 'на 2 года');
 })
 
 
@@ -161,7 +193,6 @@ const features = document.querySelectorAll('.intro-license-features-item__title'
 
 features.forEach(feature => {
     feature.addEventListener('click', (e) => {
-        console.dir(e.target);
         e.target.nextElementSibling.style.display = e.target.nextElementSibling.style.display === 'none' ? '' : 'none';
         console.log(e.target.nextElementSibling)
     })
@@ -171,10 +202,13 @@ features.forEach(feature => {
 const btnsLead = document.querySelectorAll('.btn-intro-lead');
 const product = document.getElementById('product');
 const modalTitle = document.querySelector('.modal-title');
+const product_price = document.getElementById('product_price');
 
 btnsLead.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        
         product.value = `Тариф: ${btn.dataset.name}`;
+        product_price.value = `${e.target.dataset.price}`;
         modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}`;
     })
 })

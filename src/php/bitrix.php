@@ -7,6 +7,7 @@ $phone = $_POST['tel-10'];
 $email = $_POST['email'];
 $site = $_POST['site'];
 $product = $_POST['product'];
+$price = $_POST['price'];
 
 
 
@@ -29,6 +30,8 @@ $queryData = http_build_query(array(
     'UTM_CAMPAIGN' => $_POST['utm_campaign'],
     'UTM_CONTENT' => $_POST['utm_content'],
     'UTM_TERM' => $_POST['utm_term'],
+    'OPPORTUNITY' => $price,		
+    'CURRENCY_ID' => 'UAH',
   ),
   'params' => array("REGISTER_SONET_EVENT" => "Y")
 ));
