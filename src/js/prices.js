@@ -211,3 +211,54 @@ btnsLead.forEach(btn => {
         modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}`;
     })
 })
+
+
+// Form value to LocalStorage
+
+const nameForm = document.getElementById('name');
+const tel = document.querySelector('[name="tel-10"]');
+const email = document.querySelector('[name="email"]');
+const site = document.querySelector('[name="site"]');
+
+
+nameForm.addEventListener('change', (e) => {
+    if (e.target.value !== '') {
+    localStorage.setItem('formName', e.target.value);
+    }
+})
+
+if (localStorage.getItem('formName')) {
+    nameForm.value = localStorage.getItem('formName');
+}
+
+tel.addEventListener('change', (e) => {
+    if (e.target.value !== '') {
+    localStorage.setItem('formTel', e.target.value);
+    }
+})
+
+if (localStorage.getItem('formTel')) {
+    tel.value = localStorage.getItem('formTel');
+}
+
+email.addEventListener('change', (e) => {
+    if (e.target.value !== '') {
+    localStorage.setItem('formEmail', e.target.value);
+    }
+})
+
+if (localStorage.getItem('formEmail')) {
+    email.value = localStorage.getItem('formEmail');
+}
+
+site.addEventListener('change', (e) => {
+    if (e.target.value !== '') {
+    localStorage.setItem('formSite', e.target.value);
+    }
+})
+
+if (localStorage.getItem('formSite')) {
+    site.value = localStorage.getItem('formSite');
+}
+
+// Form value to LocalStorage
