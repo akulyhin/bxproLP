@@ -1,0 +1,27 @@
+.products-section {
+    padding: 80px;
+}
+
+.products {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+
+.products_item {
+    list-style-type: none;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 15px 0 rgba(0,0,0,0.35);
+    transition: transform .3s ,box-shadow 300ms ease, -webkit-box-shadow 300ms ease;
+    min-height: 200px;
+    text-align: center;
+    padding: 20px 25px;
+    flex-basis: 350px;
+
+    &:hover {
+        box-shadow: 0 4px 20px 4px rgba(0,0,0,0.35);
+        transform: translateY(-4px);
+    }
+}
