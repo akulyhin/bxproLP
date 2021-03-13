@@ -24,4 +24,12 @@
         box-shadow: 0 4px 20px 4px rgba(0,0,0,0.35);
         transform: translateY(-4px);
     }
+    
+}
+
+
+@media (max-width: 991px) {
+    .products_item:not(:last-child) {
+        margin-bottom: 50px;
+    }
 }
