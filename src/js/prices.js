@@ -212,7 +212,6 @@ btnsLead.forEach(btn => {
     })
 })
 
-
 // Form value to LocalStorage
 
 const nameForm = document.getElementById('name');
