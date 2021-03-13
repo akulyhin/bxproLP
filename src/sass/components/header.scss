@@ -5,8 +5,36 @@ header {
     z-index: 999;
 }
 
+.header-top {
+    font-size: 13px;
+    padding: 10px 0;
+    background-color: #2b2b33;
+    border-bottom: 2px solid #2855af;
+    color: #fff;
+
+    & a {
+        color: #fff;
+    }
+}
+
+.header-top_inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-top div:not(:first-child) {
+    margin-left: 35px;
+}
+
+@media (max-width: 767px) {
+    .address,
+    .email {
+        display: none;
+    }
+}
+
 .header {
-    height: 80px;
+    height: 70px;
     // position: relative;
     padding: 20px 0;
     display: flex;
