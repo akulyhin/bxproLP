@@ -112,10 +112,20 @@ window.addEventListener('scroll', () => {
 })
 
 
+jQuery(function() {
+  jQuery(".back2Top").hide().removeAttr("href");
 
-back2Top.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  if (jQuery(window).scrollTop() >= "250")
+    jQuery(".back2Top").fadeIn("slow");
+
+  jQuery(window).scroll(function() {
+    if (jQuery(window).scrollTop() <= "250") 
+      jQuery(".back2Top").fadeOut("slow");
+    else 
+      jQuery(".back2Top").fadeIn("slow");
+  });
+
+  jQuery(".back2Top").click(function() {
+    jQuery("html, body").animate({ scrollTop: 0 }, "slow")
   })
-})
+});
