@@ -5,7 +5,7 @@ $(document).ready(function(){
     })
 })
 
-$('[data-time="1"]').click(function() {
+$('[data-time="1"].intro-license-table-select-item').click(function() {
     $(".intro-license-table-select-title").text('на 1 месяц');
     $('[data-type="crm"] .full').html('1 200 ₴');
     $('[data-type="crm"] .base').css('display', 'none');
@@ -34,7 +34,7 @@ $('[data-time="1"]').click(function() {
 })
 
 
-$('[data-time="3"]').click(function() {
+$('[data-time="3"].intro-license-table-select-item').click(function() {
     $(".intro-license-table-select-title").text('на 3 месяца');
     $('[data-type="crm"] .full').html('3 600 ₴');
     $('[data-type="crm"] .base').css('display', 'none');
@@ -62,7 +62,7 @@ $('[data-time="3"]').click(function() {
 })
 
 
-$('[data-time="12"]').click(function() {
+$('[data-time="12"].intro-license-table-select-item').click(function() {
     $(".intro-license-table-select-title").text('на год');
     $('[data-type="crm"] .full').html('10 080 ₴');
     $('[data-type="crm"] .base').html('14 400 ₴');
@@ -94,7 +94,7 @@ $('[data-time="12"]').click(function() {
 })
 
 
-$('[data-time="24"]').click(function() {
+$('[data-time="24"].intro-license-table-select-item').click(function() {
     $(".intro-license-table-select-title").text('на 2 года');
     $('[data-type="crm"] .full').html('17 280 ₴');
     $('[data-type="crm"] .base').html('28 800 ₴');
@@ -206,8 +206,7 @@ const product_price = document.getElementById('product_price');
 
 btnsLead.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        
-        product.value = `Тариф: ${btn.dataset.name}`;
+        product.value = `Тариф: ${btn.dataset.name}, ${btn.dataset.timeName}`;
         product_price.value = `${e.target.dataset.price}`;
         modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}`;
     })
