@@ -208,7 +208,7 @@ btnsLead.forEach(btn => {
     btn.addEventListener('click', (e) => {
         product.value = `Тариф: ${btn.dataset.name}, ${btn.dataset.timeName}`;
         product_price.value = `${e.target.dataset.price}`;
-        modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}`;
+        modalTitle.innerHTML = `Заявка на тариф: ${btn.dataset.name}, ${btn.dataset.timeName}`;
     })
 })
 
