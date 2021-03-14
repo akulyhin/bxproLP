@@ -38,13 +38,13 @@ $(document).ready(function() {
 
 
 // Плавная прокрутка
-var $page = $('html, body');
-$('a[href*="#"]').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 300);
-    return false;
-});
+// var $page = $('html, body');
+// $('a[href*="#"]').click(function() {
+//     $page.animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 300);
+//     return false;
+// });
 
 
 
@@ -115,7 +115,7 @@ window.addEventListener('scroll', () => {
 jQuery(function() {
 
   jQuery(".back2Top").click(function() {
-    jQuery("html, body").animate({ scrollTop: 0 }, "slow")
+    jQuery("html, body").animate({ scrollTop: 0 }, "fast")
   })
 });
 
