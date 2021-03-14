@@ -78,7 +78,7 @@ $('.img-block').magnificPopup({
   });
 
 
-  $('.sertificate-img').magnificPopup({
+  $('.product-image').magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
