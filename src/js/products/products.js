@@ -69,7 +69,12 @@ products.forEach(product => {
 
 
 
-
+const testBtn = document.querySelector('.btn-block a.sign-in');
+testBtn.addEventListener('click', () => {
+    productModal.value = '';
+    product_price.value = '';
+    modalTitle.textContent = 'Оставьте заявку заполнив форму';
+})
 
 
 function prettify(num) {
