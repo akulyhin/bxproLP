@@ -40,6 +40,8 @@ const companyPrice = document.querySelector('[data-products="company"] .products
 
 const salesModalPrice = document.querySelector('#salesModal .new-price span');
 
+const productModal = document.getElementById('product');
+
 products.forEach(product => {
 
     salesDepPrice.textContent = prettify(product.salesDep.price);
@@ -52,19 +54,21 @@ products.forEach(product => {
     const salesResult = +product.salesDep.price / +product.salesDep.oldPrice * 100 - 100;
     salesModalSticker.textContent = `${Math.round(salesResult)}%`;
 
+    btnsSalesModal.forEach(btnSalesModal => {
+        btnSalesModal.addEventListener('click', () => {
+            modalTitle.textContent = `Заявка на внедрение: ${product.salesDep.name}`;
+            productModal.value = `Заявка на внедрение: Отдел продаж`;
+            product_price.value = product.salesDep.price;
+        })
+    })
+
     
     contactCentrPrice.textContent = product.contactCentr.price;
     companyPrice.textContent = product.company.price;
 });
 
 
-btnsSalesModal.forEach(btnSalesModal => {
-    btnSalesModal.addEventListener('click', () => {
-        modalTitle.textContent = `Заявка на внедрение: Отдел продаж`;
-        product.value = `Заявка на внедрение: Отдел продаж`;
-        product_price.value = `10000`;
-    })
-})
+
 
 
 
