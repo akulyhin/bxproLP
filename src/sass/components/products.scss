@@ -1,5 +1,14 @@
 .products-section {
     padding: 80px 0;
+    background-image: url(../images/bg/block-blue.svg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 105% 10%;
+
+    @media (max-width: 767px) {
+        background-size: 150%;
+        background-position: 0 0;
+    }
 }
 
 .products {
