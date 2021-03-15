@@ -1,7 +1,7 @@
 const products = [
     {
         'salesDep': {
-            'name': 'Отдел продаж',
+            'name': 'Отдел Продаж',
             'image': './images/products/sales-dep.jpg',
             'price': '10000',
             'oldPrice': '13000',
@@ -23,7 +23,6 @@ const products = [
         }
     }
 ]
-
 
 const salesDepPrice = document.querySelector('[data-products="salesDep"] .products_price span');
 const salesDepImage = document.querySelector('[data-products="salesDep"] .products_image img');
