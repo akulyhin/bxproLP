@@ -15,10 +15,10 @@ const products = [
             'term': 'до 10 дней'
         },
         'company': {
-            'name': 'Компания',
+            'name': 'Индивидуальный',
             'image': '',
-            'price': '15 000',
-            'oldPrice': '17 000',
+            'price': 'от 25 000',
+            'oldPrice': '',
             'term': 'до 14 дней'
         }
     }
